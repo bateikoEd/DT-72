@@ -126,7 +126,7 @@ public class Main {
             System.out.println("Problem with file: FixSalaryEmployee.txt");
         }
         Comparator CompareEmployee = new SortEmployee();
-        Collections.sort(ArrEmployee,Comparator.comparing((Employee p)->p.MiddleMonthSalary()).thenComparing(p->p.getNameEmployee()));
+        Collections.sort(ArrEmployee,Comparator.comparing((Employee p)->p.MiddleMonthSalary()).reversed().thenComparing(p->p.getNameEmployee()));
         System.out.println("After sorting");
         int i = 0;
         for(Employee k:ArrEmployee){
