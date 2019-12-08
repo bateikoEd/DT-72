@@ -30,7 +30,7 @@ public class Main {
             data = data.replaceAll("\\d|\\W"," ");
             p("replace:" + data);
             String[] strArr = data.split(" ");
-            
+
             Arrays.sort(strArr);
 
             p("Output data: ");
