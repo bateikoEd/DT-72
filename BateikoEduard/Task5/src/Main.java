@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
@@ -31,7 +32,16 @@ public class Main {
             p("replace:" + data);
             String[] strArr = data.split(" ");
 
-            Arrays.sort(strArr);
+            Comparator MyComparator = new Comparator() {
+                @Override
+                public int compare(Object p1, Object t1) {
+                    if(p1.equalsIgnoreCase(t1))
+                        return 1;
+                    else
+                        return -1;
+                }
+            };
+            Arrays.sort(strArr, Comparator());
 
             p("Output data: ");
             pStr(strArr);
