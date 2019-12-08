@@ -1,9 +1,6 @@
-package com.bateiko;
-
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         Scanner enter = new Scanner(System.in);
         System.out.println("Enter word:");
@@ -16,4 +13,5 @@ public class Main {
 
         System.out.println("Enter word:\t" + str1 + "\nReverse word:\t" + str2);
     }
+
 }
