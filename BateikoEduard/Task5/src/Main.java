@@ -1,8 +1,10 @@
 import java.util.Arrays;
-import java.util.Comparator;
+import java.util.List;
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -28,23 +30,16 @@ public class Main {
             p("inform: " + data);
             myReader.close();
 
-            data = data.replaceAll("\\d|\\W"," ");
+            data = data.trim().replaceAll("\\d|\\W"," ");
+
             p("replace:" + data);
-            String[] strArr = data.split(" ");
+            String[] strArr = data.split("\\s+");
 
-            Comparator MyComparator = new Comparator() {
-                @Override
-                public int compare(Object p1, Object t1) {
-                    if(p1.equalsIgnoreCase(t1))
-                        return 1;
-                    else
-                        return -1;
-                }
-            };
-            Arrays.sort(strArr, Comparator());
-
+            Stream<String> stringStream= Arrays.stream(strArr);
+            List<String> myList=stringStream.sorted((o1,o2)->o1.compareToIgnoreCase(o2)).collect(Collectors.toUnmodifiableList());;
             p("Output data: ");
             pStr(strArr);
+            System.out.println(myList);
         }catch(IOException e){
             p("An error occured.");
             e.printStackTrace();
