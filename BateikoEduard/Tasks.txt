@@ -24,3 +24,7 @@
 завдання 6
 Написати консольну програму, яка «розгортає задом наперед» рядок (наприклад, на вхід було «йцукенгшщзх», на виході потрібно «хзщшгнекуцй». Не застосовувати препарат функцію 
 
+https://www.geeksforgeeks.org/arraylist-in-java/
+https://www.geeksforgeeks.org/linked-list-in-java/
+https://www.geeksforgeeks.org/treeset-in-java-with-examples/
+https://www.geeksforgeeks.org/hashset-in-java/
